@@ -1,4 +1,4 @@
-import { IsDefined, IsString, IsNotEmpty, Length, IsNumber, isDefined, IsDate } from "class-validator";
+import { IsDefined, IsString, IsNotEmpty, Length, IsNumber, IsDate } from "class-validator";
 
 export class CreateInvItemDto{
 
