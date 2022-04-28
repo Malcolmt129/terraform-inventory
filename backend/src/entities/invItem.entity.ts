@@ -3,7 +3,10 @@ import { Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity()
 export class invItem {
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     @PrimaryGeneratedColumn()
     id:number;
 
@@ -38,5 +41,9 @@ export class invItem {
     memo: string;
 
     @Column()
+<<<<<<< Updated upstream
     lifespan: Number;
+=======
+    lifespan: string;
+>>>>>>> Stashed changes
 }
