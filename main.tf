@@ -1,5 +1,7 @@
 provider "aws" {
   region = "us-east-1"
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
 }
 
 resource "aws_instance" "backend" {
@@ -13,5 +15,5 @@ resource "aws_instance" "backend" {
 
 resource "aws_s3_bucket_policy" "frontend412" {
   bucket = "frontend412.s3-website-es-east-1.amazonaws.com"
-  policy = file("policy.json")
+  policy = "${file("policy.json")}"
 }
