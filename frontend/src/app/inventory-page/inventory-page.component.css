@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(235, 235, 235);
+}
+
+#searchBar {
+    background-color: white;
+    padding: 20px;
+    height: 125px;
+    right: 0;
+    margin-left: 200px;
+    color: black;
+}
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    background: white;
+}
+
+#home, #add {
+    width: 200px;
+    height: 75px;
+    margin: 0;
+    margin-bottom: 5px;
+    border-radius: 0;
+    background-color: #ff681f;
+    font-size: 200%;
+}
+
+#home:hover, #add:hover {
+    color: #ff681f;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: large;
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+}
+
+#search {
+    width: 40%;
+    height: 7vh;
+    left: 225px;
+    margin-top: 30px;
+    padding: 12px 20px;
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 8px;
+    outline: none;
+    font-size: x-large;
+    vertical-align: middle;
+}
+
+#search:hover, #search:focus {
+    border: 2px solid #ff681f;
+}
+
+#go {
+    /* position: relative; */
+    float: inline-end;
+    width: 13vh;
+    height: 7vh;
+    margin-left: 35px;
+    margin-top: 30px;
+    font-size: large;
+    background-color: #ff681f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#go:hover {
+    color: #ff681f;
+    background-color: white;
+    border: 1px solid #ff681f;
+}
+
+.select {
+    position: absolute;
+    width: 300px;
+    margin-top: 70px;
+    margin-left: 30px;
+}
+
+input[type=radio] {
+    margin-left: 30px;
+}
+
+button {
+    font-size: larger;
+    background-color: #688ccb;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding:16px;
+    text-decoration: none;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #688ccb;
+    background-color: white;
+}
+
+#results {
+    float: inline-end;
+    width: 89%;
+    margin-left: 200px;
+    height: 615px;
+    overflow: auto;
+}
+
+.result-table {
+    width: 100%;
+}
+  
+.mat-row .mat-cell {
+    font-size: large;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+  
+.mat-row:hover .mat-cell {
+    border-color: #688ccb;
+}
+
+th {
+    font-size: large;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(235, 235, 235);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory</title>
+    </head>
+    <body>
+        <mat-sidenav-container class="nav-container">
+            <mat-sidenav class="nav-bar" opened="" mode="side">
+                <button id="home" routerLink="/home" routerLinkActive="active"><nav>Home</nav></button>
+                <button id="add" routerLink="/add" routerLinkActive="active"><nav>Add Item</nav></button>
+                <div class="footer">Remaining Value: {{remVal()}}</div>
+            </mat-sidenav>
+            <mat-sidenav-content></mat-sidenav-content>
+        </mat-sidenav-container>
+        <div class="container" id="searchBar">
+            <form [formGroup]="searchForm">
+                <input type="search" name="search" id="search" formControlName="search">
+                <button type="submit" name="go" id="go" (click)="searchFunc()">Search</button>
+            </form>
+        </div>
+        <div id="results">
+            <table mat-table [dataSource]="dataSource" class="result-table">
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef>ID #</th>
+                  <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef>Name</th>
+                  <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                </ng-container>
+
+                <!-- Quantity Column -->
+                <ng-container matColumnDef="amount">
+                    <th mat-header-cell *matHeaderCellDef>Amount</th>
+                    <td mat-cell *matCellDef="let element">{{element.amount}}</td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr
+                    mat-row
+                    (click)="clickedRow = row; openDialog();"
+                    *matRowDef="let row; columns: displayedColumns;"
+                ></tr>
+              </table>
+        </div>
+    </body>
+</html>
